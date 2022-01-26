@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Theme 1 */
+    /* Backgrounds */
+    --bg-very-dark-desaturated-blue-main:hsl(222, 26%, 31%);
+    --bg-very-dark-desaturated-blue-keypad-bg:hsl(223, 31%, 20%);
+    --bg-very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
+    /* Keys */
+    --bg-desaturated-dark-blue-key-bg: hsl(225, 21%, 49%);
+    --bg-desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --red-bg-toggle:hsl(6, 63%, 50%);
+    --dark-red-bg-shadow:hsl(6, 70%, 34%);
+    --light-grayish-orange-key-bg:hsl(30, 25%, 89%);
+    --grayish-orange-key-shadow: hsl(28, 16%, 65%);
+    /* Text */
+    --text-very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --text-white:hsl(0, 0, 100%);
+
+    /* Theme 2 */
+    /* Backgrounds */
+    --bg-light-gray-main: hsl(0, 0%, 90%);
+    --bg-grayish-red-toggle:hsl(0, 5%, 81%);
+    --bg-very-light-gray-screen:hsl(0, 0%, 93%);
+    /* Keys */
+    --dark-moderate-cyan-key-bg: hsl(185, 42%, 37%);
+    --very-dark-cyan-key-shadow: hsl(185, 58%, 25%);
+    --orange-key-bg-toggle: hsl(25, 98%, 40%);
+    --dark-orange-key-shadow: hsl(25, 99%, 27%);
+    --light-grayish-yellow-key-bg: hsl(45, 7%, 89%);
+    --dark-grayish-orange-key-shadow:hsl(35, 11%, 61%);
+    /* Text */
+    --text-very-dark-grayish-yellow: hsl(60, 10%, 19%);
+
+    /* Theme 3 */
+    /* Backgrounds */
+    --bg-very-dark-violet-main: hsl(268, 75%, 9%);
+    --bg-very-dark-violet-toggle-screen-key: hsl(268, 71%, 12%);
+    /* Keys */
+    --dark-violet-key: hsl(281, 89%, 26%);
+    --vivid-magenta-key-shadow: hsl(285, 91%, 52%);
+    --pure-cyan-key-toggle: hsl(176, 100%, 44%);
+    --soft-cyan-key-shadow: hsl(177, 92%, 70%);
+    --very-dark-violet-key-bg: hsl(268, 47%, 21%);
+    --dark-magenta-key-shadow: hsl(290, 70%, 36%);
+    /* Text */
+    --text-light-yellow: hsl(52, 100%, 62%);
+    --text-very-dark-blue: hsl(198, 20%, 13%);
+}
+
+* {  
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size:32px;
+}
+#root {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.theme1-bg {
+    background:var(--bg-very-dark-desaturated-blue-main);
+}
+.theme2-bg {
+    background: var(--bg-light-gray-main);
+}
+.theme3-bg {
+    background: var(--bg-very-dark-violet-main);
+}
+.theme1-header {
+    color: white;
+}
+.theme2-header {
+    color: var(--text-very-dark-grayish-yellow);
+}
+.theme3-header {
+    color: var(--text-light-yellow);
+}
+/* Header */
+.theme-title {
+    font-size:10px;
+}
+.toggle-bg {
+   background: var(--bg-very-dark-desaturated-blue-keypad-bg);
+}
+.toggle-btn {
+    background:var(--red-bg-toggle);
+}
+.toggle-btn-theme2 {
+    background: var(--orange-key-bg-toggle);
+}
+.toggle-btn-theme3 {
+    background: var(--pure-cyan-key-toggle);
+}
+/* Textbox */
+.textbox-bg {
+    background: var(--bg-very-dark-desaturated-blue-screen);
+}
+.textbox-bg-theme2 {
+    background: var(--bg-very-light-gray-screen);
+}
+.textbox-bg-theme3 {
+    background: var(--bg-very-dark-violet-toggle-screen-key);
+}
+.textbox-text-theme2 {
+    color: var( --text-very-dark-grayish-yellow);
+}
+.textbox-text-theme3 {
+    color: var(--text-light-yellow);
+}
+.keypad-bg-theme2 {
+    background: var(--bg-grayish-red-toggle);
+}
+/* Keypads theme1 */
+.theme1-keys button {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background: var(--light-grayish-orange-key-bg);
+    border-radius:10px;
+    padding:4px;
+    font-weight:700;
+    color:var(--text-very-dark-grayish-blue);
+    box-shadow: 0 3px 0 var(--grayish-orange-key-shadow);
+}
+.theme1-keys button:nth-child(4),.theme1-keys button:nth-child(17) {
+    background: var(--bg-desaturated-dark-blue-key-bg);
+    color:white;
+    box-shadow: 0 3px 0 var(--bg-desaturated-dark-blue-key-shadow);
+}
+.theme1-keys button:nth-child(18) {
+    background: var(--red-bg-toggle);
+    color:white;
+    box-shadow: 0 3px 0 var(--dark-red-bg-shadow);
+}
+/* Keypads theme2 */
+.theme2-keys button {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background: var(--light-grayish-yellow-key-bg);
+    border-radius:10px;
+    padding:4px;
+    font-weight:700;
+    color:var(--text-very-dark-grayish-blue);
+    box-shadow: 0 3px 0 var(--dark-grayish-orange-key-shadow);
+}
+.theme2-keys button:nth-child(4),.theme2-keys button:nth-child(17) {
+    background: var(--dark-moderate-cyan-key-bg);
+    color:white;
+    box-shadow: 0 3px 0 var(--very-dark-cyan-key-shadow);
+}
+.theme2-keys button:nth-child(18) {
+    background: var(--orange-key-bg-toggle);
+    color:white;
+    box-shadow: 0 3px 0 var(--dark-orange-key-shadow);
+}
+/* Keypads theme3 */
+.theme3-keys button {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    background: var(--very-dark-violet-key-bg);
+    border-radius:10px;
+    padding:4px;
+    font-weight:700;
+    color:var(--text-light-yellow);
+    box-shadow: 0 3px 0 var(--dark-magenta-key-shadow);
+}
+.theme3-keys button:nth-child(4),.theme3-keys button:nth-child(17) {
+    background: var(--dark-violet-key);
+    color:white;
+    box-shadow: 0 3px 0 var(--vivid-magenta-key-shadow);
+}
+.theme3-keys button:nth-child(18) {
+    background: var(--pure-cyan-key-toggle);
+    color:var( --text-very-dark-blue);
+    box-shadow: 0 3px 0 var(--soft-cyan-key-shadow);
+}
